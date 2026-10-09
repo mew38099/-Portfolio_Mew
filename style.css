@@ -32,14 +32,6 @@ html, body {
     padding: 15px;
 }
 
-/* ปรับให้รายการฝั่งขวาขยายพื้นที่เต็มกล่อง ไม่ตกบรรทัด */
-.list-content-side {
-    font-size: 13pt;
-    padding: 15px 20px;
-    width: 100%;                         /* ให้กล่องข้อความขยายเต็มความกว้างแถบขวา */
-    min-width: 100%;
-}
-
 /* ==========================================
    Responsive Design
    ========================================== */
@@ -194,10 +186,12 @@ h2 {
     list-style-position: inside;
 }
 
+/* ปรับให้รายการฝั่งขวาขยายพื้นที่เต็มกล่อง ไม่ตกบรรทัด */
 .list-content-side {
     font-size: 13pt;
     padding: 15px 20px;
-    min-width: 80%;
+    width: 100%;
+    min-width: 100%;
 }
 
 li {
