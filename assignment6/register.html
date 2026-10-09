@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Register</title>
+        <script type="text/javascript" src="register.js"></script>
+
+        <style>
+            /* 1. จัดวางองค์ประกอบให้อยู่กลางหน้าจอแบบ Flexbox */
+            body {
+                margin: 0;
+                padding: 20px 0;
+                min-height: 100vh;
+                background-color: #f0f2f5;   /* สีพื้นหลังหน้าจอเดียวกับ Login */
+                
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                font-family: sans-serif;
+                box-sizing: border-box;
+            }
+
+            /* 2. แต่งกล่องฟอร์ม */
+            #myRegister {
+                background-color: #ffffff;
+                padding: 20px;
+                border-radius: 8px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+                width: 380px;                /* ปรับความกว้างให้พอดีกับช่องกรอกที่เยอะขึ้น */
+            }
+
+            legend {
+                font-weight: bold;
+                padding: 0 5px;
+            }
+
+            /* 3. ตกแต่งช่อง Input ข้อความ วันที่ และอีเมล */
+            input[type="text"],
+            input[type="password"],
+            input[type="email"],
+            input[type="date"] {
+                width: 92%;
+                padding: 8px;
+                margin-top: 4px;
+                margin-bottom: 10px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                display: block;
+            }
+
+            /* จัดการระยะห่างของ Radio button (เพศ) */
+            input[type="radio"] {
+                margin-top: 8px;
+                margin-bottom: 12px;
+                margin-right: 4px;
+            }
+
+            /* ลิงก์กลับไปหน้า Login */
+            p {
+                margin-top: 15px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- ลบ action="login.html" ออก เพื่อให้ JS จัดการการย้ายหน้าแทน -->
+        <form name="myRegister" id="myRegister">
+            <fieldset>
+                <legend>Register</legend>
+                <span style="font-size: 0.85em; color: #666;">* require</span> <br>
+                <span id="errormsg" style="color: red; font-weight: bold;"></span> <br>
+                
+                First name*: 
+                <input type="text" name="firstname" required>
+                
+                Last name*: 
+                <input type="text" name="lastname">
+                
+                Gender*: <br>
+                <input type="radio" name="gender" value="male">Male
+                <input type="radio" name="gender" value="female">Female
+                <input type="radio" name="gender" value="other">Other
+                <br>
+                
+                Birthday*: 
+                <input type="date" name="bday" value="">
+                
+                Email address*: 
+                <input type="email" name="email">
+                
+                Username*: 
+                <input type="text" name="username" required>
+                
+                Password*: 
+                <input type="password" name="password" required>
+                
+                Retype Password*: 
+                <input type="password" name="password" required>
+                <br>
+                
+                <input type="submit" value="Register" id="registerBtn">
+                <input type="reset" value="Reset" id="resetBtn">
+            </fieldset>
+        </form>
+
+        <p>มีบัญชีอยู่แล้ว? <a href="login.html">เข้าสู่ระบบที่นี่</a></p>
+    </body>
+</html>
